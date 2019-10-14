@@ -1,2 +1,2 @@
-echo "name": "Batman"
+echo "Batman"
 
