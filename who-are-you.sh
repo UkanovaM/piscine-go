@@ -1,2 +1,2 @@
-echo "id":70
+echo "name": "Batman"
 
