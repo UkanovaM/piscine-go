@@ -2,7 +2,7 @@ package printcomb
 
 import "github.com/01-edu/z01"
 
-func PrintComb() {
+func PrintComb2() {
 	for i := '0'; i <= '9'; i++ {
 		for k := i + 1; k <= '9'; k++ {
 			z01.PrintRune(i)
