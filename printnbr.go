@@ -14,10 +14,10 @@ func PrintNbr(n int) {
 	if n != 0 {
 		b := (n / 10) * t
 		if b != 0 {
-			PrintNbr(b)
+			PrintNbr('b')
 		}
 		c := (n % 10 * t) + '0'
-		z01.PrintRune(rune(c))
+		z01.PrintRune(rune('c'))
 	} else {
 		z01.PrintRune('0')
 	}
