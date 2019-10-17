@@ -12,11 +12,11 @@ func PrintNbr(n int) {
 		z01.PrintRune('-')
 	}
 	if n != 0 {
-		b := (n / 10) * t
+		b := (n / 10) * a
 		if b != 0 {
 			PrintNbr('b')
 		}
-		c := (n % 10 * t) + '0'
+		c := (n % 10 * a) + '0'
 		z01.PrintRune(rune('c'))
 	} else {
 		z01.PrintRune('0')
