@@ -1,4 +1,4 @@
-package piscine
+package piscine45
 
 func StrRev(s string) string {
 
