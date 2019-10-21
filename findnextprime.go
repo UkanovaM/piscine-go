@@ -1,4 +1,4 @@
-package findnextprime
+package piscine
 
 func check(x int) bool {
 	if x <= 1 {
