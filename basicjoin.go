@@ -10,5 +10,7 @@ func BasicJoin(strs []string) string {
 	var d string
 	d = "you?"
 
-	fmt.PrintRune("New string: ", a+b+c+d)
+	result = a + b + c + d
+	return result
+
 }
