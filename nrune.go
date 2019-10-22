@@ -2,5 +2,7 @@ package piscine
 
 func NRune(s string, n int) rune {
 	sentence := []rune(s)
-	return sentence[n-1]
+
+for_, a := range sentence
+return sentence[n-1]
 }
