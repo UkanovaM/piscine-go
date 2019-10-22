@@ -17,4 +17,5 @@ func PrintNbrInOrder(n int) {
 			z01.PrintRune(rune(i) + '0')
 			cnt[i]--
 		}
-		
+	}
+}
