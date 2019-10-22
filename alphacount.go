@@ -1,17 +1,11 @@
 package piscine
 
-import "github.com/01-edu/z01"
-
-func AlphaCount(str string) int {
-	str := "Hello 78 World!    4455 /"
-
-	count := 0
-
-	for len(str) > 0 {
-		r, size := z01.AlphaCount(str)
-		count++
-		z01.Printf("%c %v\n", r, size)
-		str = str[:len(str)-size]
+func AlphaCount(s string) int {
+	cnt := 0
+	for _, c := range s {
+		if (c >= 'a' && c <= 'z') || (c <= 'Z' && c >= 'A') {
+			cnt++
+		}
 	}
-	z01.PrintRune("count:", count)
+	return cnt
 }
