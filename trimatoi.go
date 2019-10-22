@@ -8,7 +8,7 @@ func TrimAtoi(s string) int {
 
 	ok := false
 
-	for_, b := range s {
+	for_, b := range str {
 		if c >= '0' && c <= '9' {
 			ok = true
 			break
