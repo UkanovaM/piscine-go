@@ -1,50 +1,30 @@
 package piscine
 
-import "github.com/01-edu/z01"
-	func check(s string) bool {
-		ok := false
-
-		for_, b := range s {
-			if c >= '0' && c <= '9' {
-				ok = true
-				break
-			}
+func TrimAtoi(s string) int {
+	num := []rune{}
+	len := 0
+	positive := false
+	negative := false
+	for _, l := range s {
+		if l == '-' && !positive {
+			negative = true
 		}
-		return ok
-
-	}
-
-func TrimAtoi(str string) int {
-
-	a := 0
-
-
-	change := false
-
-	for _, b := range str {
-		if c >= '0' && c <= '9'{
-			break
-		} 
-		if c == '-' {
-			change = true
-		} 
-		if c == "+" {
-			change = false
-		}
-	}
-	if check(str) == true {
-		for _, b := range str {
-			cnt := 0 
-			if c >= '0' && c <= '9' {
-				for i := '1'; i <= 'c'; i++ P{
-					cnt++
-				}
-				x = x*10 + cnt
+		if l > 47 && l < 58 {
+			num = append(num, l)
+			len++
+			if !negative {
+				positive = true
 			}
 		}
 	}
-	if change == true {
-		x *= -1
+	d := 1
+	ans := 0
+	for i := len - 1; i > -1; i-- {
+		ans = ans + (int(num[i])-48)*d
+		d = d * 10
 	}
-return x	
+	if negative {
+		ans = ans * (-1)
+	}
+	return ans
 }
