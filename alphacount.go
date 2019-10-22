@@ -7,7 +7,6 @@ func AlphaCount(str string) int {
 
 	counter := 0
 
-	for letter := range str {
-		z01.PrintRune(str)
-	}
+	for letter := range str 
+	z01.PrintRune(str)
 }
