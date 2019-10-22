@@ -3,12 +3,15 @@ package piscine
 import "github.com/01-edu/z01"
 
 func AlphaCount(str string) int {
+	str := "Hello 78 World!    4455 /"
 
-	counter := 0
+	count := 0
 
-	for letter := range str {
-		z01.PrintRune(letter)
+	for len(str) > 0 {
+		r, size := z01.AlphaCount(str)
+		count++
+		z01.Printf("%c %v\n", r, size)
+		str = str[:len(str)-size]
 	}
-	z01.PrintRune(counter)
-	z01.PrintRune(str)
+	z01.PrintRune("count:", count)
 }
