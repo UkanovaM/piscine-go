@@ -7,30 +7,21 @@ import (
 )
 
 func main() {
-	len := 0
-	caps := false
-	start := 1
-	tempInt := 0
-	for i := range os.Args {
-		len = i
-	}
-	if len > 0 {
-		if Compare(os.Args[1], "--upper") == 0 {
-			caps = true
+	arg := os.Args[1:]
+	ok := 0
+	for _, c := range arg {
+		cur := 0
+		for _, v := range c {
+			cur = cur*10 + int(v-'0')
 		}
-		for i := start; i <= len; i++ {
-			tempInt = BasicAtoi(os.Args[i])
-			if tempInt >= 1 && tempInt <= 26 {
-				if caps {
-					tempInt += 64
-				} else {
-					tempInt += 96
-				}
-				z01.PrintRune(rune(tempInt))
-			} else {
-				z01.PrintRune(' ')
-			}
+		if c == "--upper" {
+			ok = 1
 		}
+		if c == "--upper" || cur > 26 {
+			z01.PrintRune(' ')
+			continue
+		}
+		z01.PrintRune(rune((cur + 'a' - 1 - ok*32)))
 	}
 	z01.PrintRune('\n')
 }
