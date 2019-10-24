@@ -6,10 +6,10 @@ func ConcatParams(args []string) string {
 
 	for a, b := range answer {
 		if a == 0 {
-			asnwer = b
+			answer = b
 			continue
 		}
-		answer = answer + '\n' + b
+		answer = answer + "\n" + b
 	}
 	return answer
 }
